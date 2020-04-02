@@ -82,7 +82,7 @@ module CKB
         if cell_meta_index == grouped_indexes.first
           transaction = tx_builder.transaction
           witness = tx_builder.transaction.witnesses[cell_meta_index]
-          # 22 / 23 is the position of multisig script‘s N and M in serialized witness, it is calculated by hand
+          # 22 / 23 is the position of multisig script‘s M and N in serialized witness, it is calculated by hand
           # TODO: refactor to use molcule deserialize
           required_signatures = witness[22]
           total_public_keys = witness[23]
